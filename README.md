@@ -1,7 +1,6 @@
 # 3D Scene Graph: A Structure for Unified Semantics, 3D Space, and Camera
 
-![3D Scene Graph: It consists of 4 layers, that represent semantics, 3D space and camera. Elements are nodes in the graph and have certain attributes. Edges are formed between them to denote relationships (e.g., occlusion, relative volume, etc.).]( tools/3dscenegraph.png?raw=true )
-
+<img align="left" height="500" src="https://3dscenegraph.stanford.edu/images/3dscenegraph.png">
 
 ## Overview
 The 3D Scene Graph provides semantic data for models in the [Gibson environment](http://gibsonenv.stanford.edu/) that corresponds to the structure proposed in [3D Scene Graph: A Structure for Unified Semantics, 3D Space, and Camera](http://3dscenegraph.stanford.edu). The semantic information for models in the tiny Gibson split are verified via crowdsourcing and contain all 3D Scene Graph attributes. For the rest of the models information is the output of our automatic pipeline. You can learn more about 3D Scene Graph and interact with the semantic data here: [http://3dscenegraph.stanford.edu](http://3dscenegraph.stanford.edu)
@@ -11,7 +10,7 @@ You can download the 3D Scene Graph data from the link below. The link will firs
 
 ### [[ Download 3D Scene Graph ]](https://docs.google.com/forms/d/e/1FAIpQLScnlTFPUYtBqlN8rgj_1J3zJm44bIhmIx8gDhOqiJyTwja8vw/viewform?usp=sf_link)
 
-#### Our first release includes only the tiny Gibson models. The rest of the models will follow shortly.
+#### Data Note: Our first release includes only the tiny Gibson models. The rest of the models will follow shortly.
 #### License Note: The dataset license is included in the above link. The license in this repository covers only the provided software.
 
 
@@ -117,4 +116,4 @@ parent_room : parent room that contains this camera
 
 ## Tools & Dependencies
 
-We provide a loading function in 'tools/load.py', which requires 'Python 3.5'.
+We provide a loading function in ```tools/load.py```, which requires ```Python 3.5```.
