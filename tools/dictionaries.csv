@@ -1,0 +1,51 @@
+Room,Object,,,
+"scene category
+(MIT places)",class (COCO),material (MINC),texture (DTD),
+,,,visual,tactile
+bathroom,apple,ceramic,blotchy,braided
+bedroom,backpack,fabric,chequered,bumpy
+childs_room,banana,foliage,crosshatched,crystalline
+closet,baseball bat,food,dotted,fibrous
+corridor,baseball glove,glass,grid,frilly
+dining_room,bed,leather,interlaced,gauzy
+empty_room,bench,metal,lined,grooved
+exercise_room,bicycle,mirror,marbled,knitted
+garage,boat,other,paisley,matted
+home_office,book,oven,polka-dotted,meshed
+kitchen,bottle,paper,smeared,perforated
+living_room,bowl,plastic,stained,pleated
+lobby,cake,polished stone,striped,potholed
+pantry_room,cell phone,stone,swirly,scaly
+playroom,chair,wood,zigzagged,spiralled
+staircase,clock,,,stratified
+storage_room,couch,,,studded
+television_room,cup,,,veined
+utility_room,dining table,,,waffled
+,frisbee,,,woven
+,handbag,,,wrinkled
+,keyboard,,,
+,kite,,,
+,knife,,,
+,laptop,,,
+,microwave,,,
+,motorcycle,,,
+,mouse,,,
+,orange,,,
+,oven,,,
+,potted plant,,,
+,refrigerator,,,
+,remote,,,
+,sink,,,
+,spoon,,,
+,sports ball,,,
+,suitcase,,,
+,surfboard,,,
+,teddy bear,,,
+,tie,,,
+,toaster,,,
+,toilet,,,
+,toothbrush,,,
+,tv,,,
+,umbrella,,,
+,vase,,,
+,wine glass,,,
