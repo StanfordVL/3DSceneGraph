@@ -448,7 +448,7 @@ if __name__=="__main__":
     parser.add_argument("--verified", type=int, help="Boolean to define whether to load verified (1) or only automated (0) results")
     parser.add_argument("--visualize", type=int, help="Boolean to define whether to visualize (1) or not (0) the 3D Scene Graph mesh segmentation results")
     parser.add_argument("--data_path", type=str, help="System path to 3D Scene Graph data")
-    parser.add_argument("--", type=str, default=None, help="System path to predefined color palette for visualizing")
+    parser.add_argument("--palette_path", type=str, default=None, help="System path to predefined color palette for visualizing")
     parser.add_argument("--gibson_mesh_path", type=str, default=None, help="System path to Gibson dataset's raw mesh files (loads mesh.obj files)")
     parser.add_argument("--export_viz_path", type=str, default=None, help="System path to export wavefront files when visualizing")
     opt = parser.parse_args()
