@@ -136,7 +136,7 @@ def load_file(npz_path, building):
     ''' Load 3D Scne Graph data in the npz files
         panoramas [output] : one numpy array with object instances and one with object classes
     '''
-    data = np.load(npz_path)['output'].item()
+    data = np.load(npz_path, allow_pickle=True)['output'].item()
 
     #set bldg attributes
     for key in data['building'].keys():
