@@ -1,0 +1,16 @@
+## Format of detections_output.npz file with rectilinear detections (instance segmentations) ##
+
+One output file contains the results for all sampled frames in one panorama.
+
+output = {}
+output[dict_name] = {}
+output[dict_name]["boxes"] = boxes
+output[dict_name]["masks"] = masks
+output[dict_name]["class"] = classes
+output[dict_name]["instance"] = categories
+
+# dict_name : name of the rectilinear image (include the extension) - e.g., point_p000005_view_equirectangular_domain_rgbsample__75_-90_0_800.png
+# boxes 	: array with predicted bounding boxes - shape: num_of_predictions x 5, where the columns are: (0,min_X); (1,min_Y); (2,max_X); (3,max_Y); (4,detection scores - max is 1.00)
+# masks		: array with binary mask segmentation per prediction (value 1 belongs to instance mask) - shape: size_X x size_Y x num_of_predictions
+# classes 	: list of object class IDs per prediction - e.g., [14, 57, 59]
+# categories: list of object class (string) with unique index per prediction - e.g., ['bench_0', 'chair_0', 'potted plant_0']

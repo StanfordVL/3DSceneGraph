@@ -11,7 +11,7 @@ You can download the 3D Scene Graph data from the link below. The link will firs
 ### [[ Download 3D Scene Graph ]](https://docs.google.com/forms/d/e/1FAIpQLScnlTFPUYtBqlN8rgj_1J3zJm44bIhmIx8gDhOqiJyTwja8vw/viewform?usp=sf_link)
 
 #### Data Note: Our first release includes only the tiny Gibson models. The rest of the models will follow shortly.
-#### License Note: The dataset license is included in the above link. The license in this repository covers only the provided software.
+#### License Note: The dataset license is included in the above link. The license in this repository covers only the provided software. Note that it allows only non-commercial research use.
 
 
 ## Citations
@@ -121,6 +121,29 @@ parent_room : parent room that contains this camera
 ## Tools & Dependencies
 
 We provide a loading function in ```tools/load.py```, which requires ```Python 3.5``` and the packages: ```trimesh, PIL```. You can run this function with the ```tools/load.sh``` script - remember to change the system paths to match your configuration where applicable. In the ```tools``` folder there is the ```palette.txt``` file that contains a list of distinct RGB colors used for visualization purposes, and the ```dictionaries.csv``` file that contains a list of the category subsets of each database we use that are present in the dataset (e.g., the object classes from COCO present in the tiny Gibson models, etc.).
+
+## Automatic Labeling & 3D Scene Graph Generation
+
+The automatic labeling and 3D Scene Graph generation pipeline is included in the ```source``` folder. The code has been tested with ```Python 3.6.8```. All required dependencies can be found in ```requirements.txt```. Install them by:
+
+```
+pip install -r $3DSceneGraph/requirements.txt
+```
+
+Inside ```source``` there are three folders, which correspond to the three main steps of the method: 
+
+### 1. Framing
+
+First sample rectilinear frames on the equirectangular images (```pano2rectilinear```) and, after inferring the instance segmentations for each of this frames with the method of your choice, use ```pano_aggregation``` to aggregate the predictions on the equirectangular image. Each folder contains a shell script that you can run to process each step. The file ```detections_format.txt``` contains a description of the format of the output file of the instance segmentation.
+
+### 2. Multiview Consistency
+
+This step aggregates all panorama instance segmentations on the 3D mesh (```multiview_consistency```). Run the included shell script to start the process.
+
+### 3. 3D Scene Graph Generation
+
+Once the previous steps are finalized, this step will compute attributes and relationships, essentially building the 3D Scene Graph. Certain attributes are not computed analytically, and are provided as input to this step in the form of ```.csv``` files. You can ommit this if you do not have the ability to compute them otherwise. These are: object ```material```, object ```texture```, room ```scene_category```, room ```inst_segmentation```, room ```floor_number```, building ```gibson_split```, building ```function```, and building ```num_floors```. Included are examples of the specific file formats for the tiny Gibson split (```model_data.csv```, ```object_data.csv```).
+
 
 #### References
 [1] Xia, Fei, et al. "Gibson env: Real-world perception for embodied agents." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018.

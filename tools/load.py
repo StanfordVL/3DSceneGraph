@@ -159,7 +159,7 @@ def load_file(npz_path, building):
         building.room[room_id].set_attribute(room_voxels, 'voxel_occupancy')
         for key in data['room'][room_id].keys():
             building.room[room_id].set_attribute(data['room'][room_id][key], key)
-    
+
     #set object attributes
     unique_objects = np.unique(data['building']['object_inst_segmentation'])
     for object_id in unique_objects:
@@ -197,7 +197,6 @@ def load_3DSceneGraph(model, data_path):
     building = Building()
     npz_path = os.path.join(data_path, '3DSceneGraph_'+model+'.npz')
     building, panoramas = load_file(npz_path, building)
-    print(building.name, building.voxel_size)
     return building, panoramas
 
 
@@ -448,7 +447,7 @@ if __name__=="__main__":
     parser.add_argument("--verified", type=int, help="Boolean to define whether to load verified (1) or only automated (0) results")
     parser.add_argument("--visualize", type=int, help="Boolean to define whether to visualize (1) or not (0) the 3D Scene Graph mesh segmentation results")
     parser.add_argument("--data_path", type=str, help="System path to 3D Scene Graph data")
-    parser.add_argument("--", type=str, default=None, help="System path to predefined color palette for visualizing")
+    parser.add_argument("--palette_path", type=str, default=None, help="System path to predefined color palette for visualizing")
     parser.add_argument("--gibson_mesh_path", type=str, default=None, help="System path to Gibson dataset's raw mesh files (loads mesh.obj files)")
     parser.add_argument("--export_viz_path", type=str, default=None, help="System path to export wavefront files when visualizing")
     opt = parser.parse_args()
