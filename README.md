@@ -10,7 +10,7 @@ You can download the 3D Scene Graph data from the link below. The link will firs
 
 ### [[ Download 3D Scene Graph ]](https://docs.google.com/forms/d/e/1FAIpQLScnlTFPUYtBqlN8rgj_1J3zJm44bIhmIx8gDhOqiJyTwja8vw/viewform?usp=sf_link)
 
-#### Data Note: Our first release includes only the tiny Gibson models. The rest of the models will follow shortly.
+#### Data Note: Our current release includes the tiny and medium Gibson splits. The rest of the models will follow shortly.
 #### License Note: The dataset license is included in the above link. The license in this repository covers only the provided software. Note that it allows only non-commercial research use.
 
 
