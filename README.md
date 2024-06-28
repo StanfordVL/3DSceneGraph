@@ -8,7 +8,7 @@ The 3D Scene Graph provides semantic data for models in the [Gibson environment]
 ## Download
 You can download the 3D Scene Graph data from the link below. The link will first take you to a license agreement, and then to the data. The data per model contains only semantics and is provided in the [compressed *.npz* format](https://docs.scipy.org/doc/numpy/reference/generated/numpy.lib.format.html). To download the raw data visit the [Gibson Environment's database](http://gibsonenv.stanford.edu/database/) and agree to their terms of use. A [loading function](https://github.com/StanfordVL/3DSceneGraph/blob/master/README.md#tools_&_dependencies) that returns the data in the 3D Scene graph structure is included in the 'tools/' folder. Semantics per model correspond to the ```mesh.obj``` 3D meshes and the ```pano/rgb``` panoramas of the Gibson database. To learn more about the type of semantics included in 3D Scene Graph, see [Dataset Structure](https://github.com/StanfordVL/3DSceneGraph/blob/master/README.md#dataset-structure).  
 
-### [[ Download 3D Scene Graph ]](https://docs.google.com/forms/d/e/1FAIpQLScnlTFPUYtBqlN8rgj_1J3zJm44bIhmIx8gDhOqiJyTwja8vw/viewform?usp=sf_link)
+### [[ Download 3D Scene Graph ]](https://redivis.com/datasets/1kf9-cfjvtqc7q)
 
 #### Data Note: Our current release includes the tiny and medium Gibson splits. The rest of the models will follow shortly.
 #### License Note: The dataset license is included in the above link. The license in this repository covers only the provided software. Note that it allows only non-commercial research use.
